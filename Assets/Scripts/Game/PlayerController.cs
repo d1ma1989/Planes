@@ -62,6 +62,11 @@ public class PlayerController : CachedMonoBehaviour
 
 	private void Update()
 	{
+		if (AppManager.Game.IsPaused)
+		{
+			return;
+		}
+
 		// Firing bullets
 		if (Input.GetKeyUp(KeyCode.Space))
 		{
